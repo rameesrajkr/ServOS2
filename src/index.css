@@ -1,0 +1,183 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Noto Sans", sans-serif;
+  --font-mono: "Noto Sans", sans-serif;
+}
+
+@layer base {
+  :root {
+    /* Complete Noto Sans Typography System */
+    --font-sans: "Noto Sans", sans-serif;
+    --font-mono: "Noto Sans", sans-serif;
+
+    /* KnockOUT Orange Brand & Warm Borderless Surface System */
+    --ko-bg: #fffaf6;
+    --ko-bg-subtle: #FFF0E2;
+    --ko-bg-highlight: #FFEDD5;
+    --ko-surface: #FFFFFF;
+    --ko-primary: #F97316;
+    --ko-primary-hover: #EA580C;
+    --ko-text-primary: #3D342E;
+    --ko-text-secondary: #756A62;
+    --ko-input-border: #E8DDD3;
+    --ko-card-shadow: 0 8px 24px -4px rgba(61, 52, 46, 0.045), 0 2px 6px -1px rgba(61, 52, 46, 0.025);
+  }
+
+  html,
+  body {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
+    background-color: var(--ko-bg);
+    color: var(--ko-text-primary);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  button,
+  input,
+  select,
+  textarea,
+  table,
+  th,
+  td,
+  label,
+  span,
+  p,
+  div,
+  code,
+  kbd,
+  pre {
+    font-family: "Noto Sans", sans-serif;
+  }
+
+  /* Ensure numeric columns, timers, prices, and PINs use Noto Sans with tabular alignment */
+  .font-mono {
+    font-family: "Noto Sans", sans-serif !important;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Accessible focus indicators using primary brand orange #F97316 */
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  a:focus-visible {
+    outline: 2px solid #F97316;
+    outline-offset: 2px;
+  }
+
+  /* Functional form control boundaries with warm neutral stroke and orange focus */
+  input:not([type="checkbox"]):not([type="radio"]),
+  select,
+  textarea {
+    border-color: #E8DDD3;
+    color: #3D342E;
+  }
+}
+
+/* Harmonize legacy harsh dark/black utilities and remove decorative card strokes */
+.text-zinc-900,
+.text-stone-900,
+.text-zinc-950,
+.text-stone-950,
+.text-black {
+  color: #3D342E !important;
+}
+
+.text-zinc-800,
+.text-stone-800,
+.text-zinc-700,
+.text-stone-700 {
+  color: #4E433B !important;
+}
+
+.text-zinc-600,
+.text-stone-600,
+.text-zinc-500,
+.text-stone-500 {
+  color: #756A62 !important;
+}
+
+.text-zinc-400,
+.text-stone-400 {
+  color: #9A8E85 !important;
+}
+
+/* Replace harsh black backgrounds on active pills/buttons with Brand Orange #F97316 */
+.bg-zinc-900,
+.bg-stone-900,
+.bg-black {
+  background-color: #F97316 !important;
+  color: #FFFFFF !important;
+  border-color: transparent !important;
+}
+
+.bg-zinc-50,
+.bg-zinc-50\/70,
+.bg-zinc-50\/60,
+.bg-stone-50,
+.bg-\[\#FAF8F5\] {
+  background-color: #fcf7f3 !important;
+}
+
+.bg-zinc-100,
+.bg-stone-100,
+.bg-\[\#F4F1EA\],
+.bg-\[\#EFECE6\] {
+  background-color: #FFF0E2 !important;
+}
+
+/* Remove decorative grey card border strokes while keeping soft elevation on white cards */
+section.bg-white.border,
+div.bg-white.border.border-zinc-200,
+div.bg-white.border.border-zinc-200\/90,
+div.bg-white.border.border-zinc-200\/80,
+div.bg-white.border.border-stone-200,
+div.bg-white.border.border-\[\#EAE6DF\] {
+  border-color: transparent !important;
+  box-shadow: var(--ko-card-shadow);
+  border-radius: 1.25rem;
+}
+
+.divide-zinc-200 > :not(:last-child),
+.divide-zinc-200\/70 > :not(:last-child),
+.divide-zinc-200\/80 > :not(:last-child),
+.divide-zinc-100 > :not(:last-child) {
+  border-color: #FFF0E2 !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Warm, restrained operational scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #E6D5C5;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F97316;
+}

@@ -1,0 +1,8 @@
+{
+  "name": "Remix KnockOUT — Hospitality Operations Cockpit",
+  "description": "Hospitality Operations, Simplified. Commercial restaurant and hospitality management platform for floor, kitchen, billing, inventory, staff, and multi-company operations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
